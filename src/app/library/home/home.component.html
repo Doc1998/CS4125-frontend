@@ -1,0 +1,46 @@
+<div class="login-section">
+    <div class="row justify-content-center">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" style="text-align: center"><h4>Add book to DB</h4></div>
+                <div class="card-body">
+                    <form [formGroup]="addBookForm" (ngSubmit)="addBook()">
+                        <div class="form-group row">
+                            <label for="book_name" class="col-md-4 col-form-label text-md-right">Book Name</label>
+                            <div class="col-md-6">
+                                <input type="text" id="book_name" class="form-control" [formControlName]="'bookname'" name="bookname" required
+                                    autofocus>
+  
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="author" class="col-md-4 col-form-label text-md-right">Author</label>
+                            <div class="col-md-6">
+                                <input type="text" id="author" class="form-control" [formControlName]="'author'" name="author" required>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-group row">
+                            <label for="genre" class="col-md-4 col-form-label text-md-right">Genre</label>
+                            <div class="col-md-6">
+                                <input type="text" id="genre" class="form-control" [formControlName]="'genre'" name="genre" required>
+                            </div>
+                        </div>
+
+                        <span class="col-md-6 offset-md-4">
+                            <button type="submit" class="login">
+                                Add Book
+                            </button>
+
+                        </span>                  
+                    </form>
+                </div>
+            </div>
+            <a routerLink="/" class="float-right sign-up mr-2">Search for books</a>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
