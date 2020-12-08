@@ -27,4 +27,7 @@ export class AuthService {
         return true;
       }));
   }
+  getUserName(){
+    return this.localStorage.retrieve('username');
+  }
 }
