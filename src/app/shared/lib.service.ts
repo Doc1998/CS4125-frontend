@@ -18,4 +18,15 @@ export class LibService {
   getAllBooks(): Observable<Array<BookModel>> {
     return this.httpClient.get<Array<BookModel>>('http://localhost:8080/api/library/all');
   }
-}
+  getAllByAuthor(author: String):Observable<any> {
+    return this.httpClient.get<Array<BookModel>>('http://localhost:8080/api/library/author/' + author);
+  }
+  getAllByGenre(genre: String):Observable<any> {
+    return this.httpClient.get<Array<BookModel>>('http://localhost:8080/api/library/genre/' + genre);
+  }
+  getBookByName(name: String):Observable<any> {
+    return this.httpClient.get<BookModel>('http://localhost:8080/api/library/book/' + name);
+  }
+
+  }
+

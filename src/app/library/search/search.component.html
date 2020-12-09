@@ -3,26 +3,38 @@
         <div class="col-md-3"></div>
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header" style="text-align: center"><h4>Add book to DB</h4></div>
+                <div class="card-header" style="text-align: center"><h4>Search</h4></div>
                 <div class="card-body">
-                    <form [formGroup]="addBookForm" (ngSubmit)="addBook()">
+                    <form [formGroup]="searchName" (ngSubmit)="getAllByAuthor()">
                         <div class="form-group row">
                             <label for="book_name" class="col-md-4 col-form-label text-md-right">Book Name</label>
                             <div class="col-md-6">
                                 <input type="text" id="book_name" class="form-control" [formControlName]="'bookname'" name="bookname" required
                                     autofocus>
-
                             </div>
                         </div>
-
+                        <span class="col-md-6 offset-md-4">
+                            <button type="submit" class="login">
+                                Search
+                            </button>
+                        </span>     
+                    </form>
+                    <form [formGroup]="allByAuthor" (ngSubmit)="getAllByAuthor()">
                         <div class="form-group row">
                             <label for="author" class="col-md-4 col-form-label text-md-right">Author</label>
                             <div class="col-md-6">
                                 <input type="text" id="author" class="form-control" [formControlName]="'author'" name="author" required>
                             </div>
                         </div>
+                        <span class="col-md-6 offset-md-4">
+                            <button type="submit" class="login">
+                                Search by Author
+                            </button>
 
+                        </span> 
+                    </form>
 
+                    <form [formGroup]="allByGenre" (ngSubmit)="getAllByAuthor()">
                         <div class="form-group row">
                             <label for="genre" class="col-md-4 col-form-label text-md-right">Genre</label>
                             <div class="col-md-6">
@@ -32,14 +44,17 @@
 
                         <span class="col-md-6 offset-md-4">
                             <button type="submit" class="login">
-                                Add Book
+                                Search
                             </button>
 
-                        </span>
+                        </span>               
                     </form>
                 </div>
+                <span class="col-md-6 offset-md-4">
+                    <a routerLink="/all" class="float-right sign-up mr-2">View All Books</a>
+                    <a routerLink="/home" class="float-right sign-up mr-2">Add new book</a>
+                </span>  
             </div>
-            <a routerLink="/" class="float-right sign-up mr-2">Search for books</a>
         </div>
         <div class="col-md-3"></div>
     </div>

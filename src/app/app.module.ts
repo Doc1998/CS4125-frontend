@@ -10,6 +10,8 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 import { HomeComponent } from './library/home/home.component';
 import { AllBooksComponent } from './library/all-books/all-books.component';
 import { BookTileComponent } from './library/book-tile/book-tile.component';
+import { SearchComponent } from './library/search/search.component';
+import { BooklistComponent } from './library/booklist/booklist.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { BookTileComponent } from './library/book-tile/book-tile.component';
     SignupComponent,
     HomeComponent,
     AllBooksComponent,
-    BookTileComponent
+    BookTileComponent,
+    SearchComponent,
+    BooklistComponent
   ],
   imports: [
     BrowserModule,
