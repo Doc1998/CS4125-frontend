@@ -1,1 +1,11 @@
-<p>booklist works!</p>
+<div class="book-body">
+    <div class="container">
+      <div class="row">
+        <hr />
+        <div class="col-md-9">
+          <app-book-tile [books]="books"></app-book-tile>
+        </div>
+      </div>
+    </div>
+    <a routerLink="/search" class="float-right sign-up mr-2">Search for books</a>
+  </div>
