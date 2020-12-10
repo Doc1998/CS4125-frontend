@@ -41,7 +41,10 @@ export class HomeComponent implements OnInit {
     this.libService.addBook(this.bookRequestPayload).subscribe(data => {
       if(data){
         this.isError = false;
-        this.router.navigateByUrl('/home');
+        this.addBookForm.get('author').setValue('')
+        this.addBookForm.get('bookname').setValue('')
+        this.addBookForm.get('genre').setValue('')
+
       }else{ 
         this.isError = true;
       }
