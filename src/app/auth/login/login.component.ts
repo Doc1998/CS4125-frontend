@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.loginRequestPayload).subscribe(data => {
     if(data){
       this.isError = false;
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/search');
     }else{ 
       this.isError = true;
     }
