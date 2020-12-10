@@ -25,7 +25,7 @@ export class LibService {
     return this.httpClient.get<Array<BookModel>>('http://localhost:8080/api/library/genre/' + genre);
   }
   getBookByName(name: String):Observable<any> {
-    return this.httpClient.get<BookModel>('http://localhost:8080/api/library/book/' + name);
+    return this.httpClient.get<Array<BookModel>>('http://localhost:8080/api/library/book/' + name);
   }
 
   }

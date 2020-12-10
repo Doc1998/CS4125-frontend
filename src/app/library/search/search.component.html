@@ -5,7 +5,7 @@
             <div class="card">
                 <div class="card-header" style="text-align: center"><h4>Search</h4></div>
                 <div class="card-body">
-                    <form [formGroup]="searchName" (ngSubmit)="getAllByAuthor()">
+                    <form [formGroup]="searchName" (ngSubmit)="setAll()">
                         <div class="form-group row">
                             <label for="book_name" class="col-md-4 col-form-label text-md-right">Book Name</label>
                             <div class="col-md-6">
@@ -15,11 +15,12 @@
                         </div>
                         <span class="col-md-6 offset-md-4">
                             <button type="submit" class="login">
-                                Search
+                                Click to prepare search
                             </button>
-                        </span>     
+                            <a href="/byName/{{bookname}}">Search by name</a>
+                        </span>    
                     </form>
-                    <form [formGroup]="allByAuthor" (ngSubmit)="getAllByAuthor()">
+                    <form [formGroup]="allByAuthor" (ngSubmit)="setAll()">
                         <div class="form-group row">
                             <label for="author" class="col-md-4 col-form-label text-md-right">Author</label>
                             <div class="col-md-6">
@@ -28,13 +29,13 @@
                         </div>
                         <span class="col-md-6 offset-md-4">
                             <button type="submit" class="login">
-                                Search by Author
+                                Click to prepare search
                             </button>
-
+                            <a href="/byAuthor/{{author}}">Search by author</a>
                         </span> 
                     </form>
 
-                    <form [formGroup]="allByGenre" (ngSubmit)="getAllByAuthor()">
+                    <form [formGroup]="allByGenre" (ngSubmit)="setAll()">
                         <div class="form-group row">
                             <label for="genre" class="col-md-4 col-form-label text-md-right">Genre</label>
                             <div class="col-md-6">
@@ -44,10 +45,10 @@
 
                         <span class="col-md-6 offset-md-4">
                             <button type="submit" class="login">
-                                Search
+                                Click to prepare search
                             </button>
-
-                        </span>               
+                            <a href="/byGenre/{{genre}}">Search by genre</a>
+                        </span>              
                     </form>
                 </div>
                 <span class="col-md-6 offset-md-4">

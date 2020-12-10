@@ -12,6 +12,9 @@ import { LibService } from 'src/app/shared/lib.service';
 export class SearchComponent implements OnInit {
   allByGenre: FormGroup
   allByAuthor: FormGroup
+  author: String
+  genre: String
+  bookname: String
   searchName: FormGroup
   isError: boolean;
   books: Array<BookModel> = [];
@@ -24,20 +27,18 @@ export class SearchComponent implements OnInit {
       bookname : new FormControl('')
     })
     this.allByAuthor = new FormGroup({
-      author : new FormControl('')
+      author : new FormControl('Donal')
     })
     this.allByGenre = new FormGroup({
       genre : new FormControl('')
     })
+
+    this.author = this.allByAuthor.get('author').value
   }
-  getAllByAuthor(){
-    this.libService.getAllByAuthor(this.allByAuthor.get('author').value).subscribe(data => {
-      if(data){
-        this.isError = false;
-      }else{ 
-        this.isError = true;
-      }
-    });
+  setAll(){
+    this.author = this.allByAuthor.get('author').value
+    this.genre = this.allByGenre.get('genre').value
+    this.bookname = this.searchName.get('bookname').value
   }
 
 }
