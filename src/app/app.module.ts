@@ -12,6 +12,8 @@ import { AllBooksComponent } from './library/all-books/all-books.component';
 import { BookTileComponent } from './library/book-tile/book-tile.component';
 import { SearchComponent } from './library/search/search.component';
 import { BooklistComponent } from './library/booklist/booklist.component';
+import { GenreListComponent } from './library/genre-list/genre-list.component';
+import { NameListComponent } from './library/name-list/name-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { BooklistComponent } from './library/booklist/booklist.component';
     AllBooksComponent,
     BookTileComponent,
     SearchComponent,
-    BooklistComponent
+    BooklistComponent,
+    GenreListComponent,
+    NameListComponent
   ],
   imports: [
     BrowserModule,
