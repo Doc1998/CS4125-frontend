@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BookModel } from 'src/app/shared/book-model';
-import { LibService } from 'src/app/shared/lib.service';
+import { BookModel } from 'src/app/lib-service/book-model';
+import { LibService } from 'src/app/lib-service/lib.service';
 
 @Component({
   selector: 'app-genre-list',
