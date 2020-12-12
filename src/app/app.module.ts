@@ -14,8 +14,6 @@ import { SearchComponent } from './library/search/search.component';
 import { BooklistComponent } from './library/booklist/booklist.component';
 import { GenreListComponent } from './library/genre-list/genre-list.component';
 import { NameListComponent } from './library/name-list/name-list.component';
-import { RatingComponent } from './library/rating/rating.component';
-import { RatingTileComponent } from './library/rating-tile/rating-tile.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +26,7 @@ import { RatingTileComponent } from './library/rating-tile/rating-tile.component
     SearchComponent,
     BooklistComponent,
     GenreListComponent,
-    NameListComponent,
-    RatingComponent,
-    RatingTileComponent
+    NameListComponent
   ],
   imports: [
     BrowserModule,

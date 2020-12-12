@@ -8,7 +8,6 @@ import { BooklistComponent } from './library/booklist/booklist.component';
 import { GenreListComponent } from './library/genre-list/genre-list.component';
 import { HomeComponent } from './library/home/home.component';
 import { NameListComponent } from './library/name-list/name-list.component';
-import { RatingComponent } from './library/rating/rating.component';
 import { SearchComponent } from './library/search/search.component';
 
 const routes: Routes = [
@@ -19,9 +18,7 @@ const routes: Routes = [
   {path:'search',component: SearchComponent},
   {path:'byAuthor/:id',component: BooklistComponent},
   {path:'byGenre/:id',component: GenreListComponent},
-  {path:'byName/:id',component: NameListComponent},
-  {path:'addRating',component: RatingComponent}
-
+  {path:'byName/:id',component: NameListComponent}
 ];
 
 @NgModule({
