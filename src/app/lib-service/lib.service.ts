@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BookRequestPayLoad } from '../library/home/book.request.payload';
+import { RatingRequestPayLoad } from '../library/rating/rating.request.payload';
 import { BookModel } from './book-model';
 
 @Injectable({
@@ -14,6 +15,9 @@ export class LibService {
   }
   addBook(bookRequestPayload: BookRequestPayLoad): Observable<any>{
     return this.httpClient.post('http://localhost:8080/api/library/add', bookRequestPayload,{responseType: 'text'});
+  }
+  addRating(ratingRequestPayload: RatingRequestPayLoad): Observable<any>{
+    return this.httpClient.post('http://localhost:8080/api/library/rate', ratingRequestPayload,{responseType: 'text'});
   }
   getAllBooks(): Observable<Array<BookModel>> {
     return this.httpClient.get<Array<BookModel>>('http://localhost:8080/api/library/all');
